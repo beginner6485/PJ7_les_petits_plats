@@ -1,0 +1,128 @@
+body {
+  background-color: rgba(128, 128, 128, 0.3254901961);
+}
+
+#container-header {
+  width: 100%;
+  height: auto;
+}
+#container-header .background-image {
+  background-image: url("../../assets/logo/backgroundImg.jpeg"); /* Remplace 'chemin/vers/ton/image.jpg' par le chemin de ton image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+#container-header .background-image .img-fluid {
+  width: 200px;
+  margin: 50px;
+}
+#container-header #txt-header {
+  color: #FFD15B;
+  width: 60%;
+  font-size: 40px;
+  word-wrap: break-word;
+}
+#container-header #flex-header-txt {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  height: 250px;
+  justify-content: space-around;
+}
+#container-header .form-control {
+  width: 65%;
+}
+
+#container-header::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(128, 128, 128, 0.3254901961);
+}
+
+.container {
+  height: 500px;
+}
+.container #button-selection {
+  height: 80px;
+  margin-top: 20px;
+}
+.container #button-selection .btn {
+  height: 40px;
+  width: 150px;
+  background-color: white;
+  margin-right: 30px;
+}
+.container .col {
+  padding: 10px;
+}
+.container .recipe-space {
+  background-color: white;
+  height: 1000px;
+  border-radius: 20px;
+}
+.container .img-div {
+  width: 100%;
+  height: 300px;
+}
+.container .recipe-title {
+  font-family: "Anton";
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.container .time-recipe {
+  position: absolute;
+  width: 60px;
+  background-color: #FFD15B;
+  border-radius: 10px;
+  text-align-last: center;
+  top: 20px;
+  right: 40px;
+  font-size: small;
+}
+.container .recipe-img-style {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.container .recipeMargin {
+  margin: 20px;
+}
+
+.state-recipe, .ingredient-title {
+  color: grey;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 17px;
+}
+
+.description-txt {
+  font-size: 15px;
+  height: 300px;
+}
+
+.ingredientsArray {
+  display: flex;
+  flex-wrap: wrap;
+}
+.ingredientsArray .elements {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 5px;
+}
+.ingredientsArray .elements .underElement {
+  color: grey;
+  font-size: smaller;
+}
+.ingredientsArray .elements .ingredient {
+  font-size: small;
+}
+
+/*# sourceMappingURL=main.css.map */
