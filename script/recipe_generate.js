@@ -1,7 +1,6 @@
 import { recipes } from '../data/recipes.js';
 
-
-function recipeGenerate(recipes) {
+export function recipeGenerate(recipes) {
     const row = document.querySelector('.row'); 
 
     recipes.forEach(recipe => {
@@ -23,7 +22,7 @@ function recipeGenerate(recipes) {
             img.classList.add('recipe-img-style');
             
             const time = document.createElement('div');
-            time.textContent = recipe.time +=" min";
+            time.textContent = recipe.time +" min";
             time.classList.add('time-recipe');
 
 
@@ -117,4 +116,3 @@ function recipeGenerate(recipes) {
         });
 }
 
-recipeGenerate(recipes);

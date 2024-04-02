@@ -33,7 +33,7 @@ body {
   justify-content: space-around;
 }
 #container-header .form-control {
-  width: 65%;
+  width: 1000px;
 }
 
 #container-header::before {

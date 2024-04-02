@@ -10,14 +10,13 @@ function filterOnclick(){
     ingredientSelection.classList.add("btn");
     ingredientSelection.textContent = "ingredient";
     
-
     const appareilSelection = document.createElement("div");
     appareilSelection.classList.add("btn");
     appareilSelection.textContent ="appareil";
 
     const ustensilSelection = document.createElement("div");
     ustensilSelection.classList.add("btn");
-    ustensilSelection.textContent ="ustensil";
+    ustensilSelection.textContent ="ustensile";
 
     button_space.appendChild(ingredientSelection);
     ingredientSelection.appendChild(iconElement);
