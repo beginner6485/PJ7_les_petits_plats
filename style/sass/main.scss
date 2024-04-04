@@ -2,6 +2,7 @@ $gray: #80808053;
 $yellow: #FFD15B;
 $font-family:"Anton";
 
+
 body{
     background-color: $gray;     
 }
@@ -43,6 +44,18 @@ body{
     .form-control{
         width: 1000px;
     }
+
+    #search{
+        display: flex;
+    }
+
+    .fas{
+        position: absolute;
+        transform: translateX(-100%);
+        font-size: x-large;
+        align-self: center;
+        right: 200px; 
+    }
 }
 
 #container-header::before {
@@ -55,18 +68,54 @@ body{
 }
 
 .container{
-    height: 500px;
+    height: auto;
 
     #button-selection{
-        height: 80px;
+        height: auto;
         margin-top: 20px;
 
+        .btn, .tag-space-ingredient, .tagAll{
+            padding: 0; 
+            margin: 0; 
+        }
+
+        .items{
+            padding: 10px;
+            font-size:medium;
+        }
+
         .btn{
-            height: 40px;
-            width: 150px;
+            height: auto;
+            width: 200px;
             background-color: white;
             margin-right: 30px;
         }
+
+        .tag-space-ingredient{
+        width: 200px;
+        height: auto;
+        background-color: white;
+        }
+
+        .tagAll{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tag{
+            list-style-type: none;
+            align-self: flex-start;
+        }
+
+        .chevron {
+            width: 60%;
+            text-align: end;
+        }
+
+        .space{
+            border-color: $gray;
+        }
+
     }
 
     .col{
@@ -108,8 +157,6 @@ body{
             border-top-left-radius: 20px;
             border-top-right-radius: 20px;
         }
-
-
         .recipeMargin{
             margin: 20px;
         }
@@ -140,9 +187,8 @@ body{
                 color:grey;
                 font-size: smaller;
             }
-        .ingredient{
-            font-size: small;
-        }
-        }
     }
+
+}
+    
 

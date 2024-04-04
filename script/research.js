@@ -3,7 +3,7 @@ import { recipeGenerate } from './recipe_generate.js';
 
 const space = document.getElementById('space-research');
 
-    function researchRecipes() {
+export function researchRecipes() {
 
             space.addEventListener('keyup', function(){
 
@@ -13,7 +13,9 @@ const space = document.getElementById('space-research');
                         let filteredRecipes = recipes.filter(recipe => {
                             let isNameMatch = recipe.name.toLowerCase().includes(textTape);
                             let isIngredientMatch = recipe.ingredients.some(ingredient => ingredient.ingredient.toLowerCase().includes(textTape));
-                            return isNameMatch|| isIngredientMatch
+                            let isaAppliance = recipe.appliance.toLowerCase().includes(textTape);
+                            let isUstensils = recipe.ustensils.some(ustensil => ustensil.toLowerCase().includes(textTape.toLowerCase()));
+                            return isNameMatch|| isIngredientMatch || isaAppliance || isUstensils ;
                         });
                             const allRecipes = document.querySelectorAll('.col');
                             allRecipes.forEach(recipe => {
@@ -26,8 +28,6 @@ const space = document.getElementById('space-research');
                             recipeGenerate(recipes);
                         }
             });
-                // Générer les recettes initiales
-             
     }
     recipeGenerate(recipes);
     researchRecipes();

@@ -1,5 +1,6 @@
 import { recipes } from '../data/recipes.js';
 
+
 export function recipeGenerate(recipes) {
     const row = document.querySelector('.row'); 
 
@@ -54,7 +55,7 @@ export function recipeGenerate(recipes) {
         const recipeIngredients = document.createElement('div');
 
         ingredientList.forEach((items) =>{
-
+            
             let quantity = items.quantity;
             let unity = items.unit;
             let ingredient = items.ingredient;
@@ -115,4 +116,5 @@ export function recipeGenerate(recipes) {
         ingredientSpace.appendChild(recipeIngredients);
         });
 }
+
 
