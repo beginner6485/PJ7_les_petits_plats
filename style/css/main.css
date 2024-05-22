@@ -62,9 +62,13 @@ body {
   height: auto;
   margin-top: 20px;
 }
-.container #button-selection .btn, .container #button-selection .tag-space-ingredient, .container #button-selection .tagAll {
+.container #button-selection .btn, .container #button-selection .tag-space-ingredient, .container #button-selection .tagAll, .container #button-selection .tagClick {
   padding: 0;
   margin: 0;
+}
+.container #button-selection .txt {
+  width: 80px;
+  font-size: large;
 }
 .container #button-selection .items {
   padding: 10px;
@@ -75,6 +79,7 @@ body {
   width: 200px;
   background-color: white;
   margin-right: 30px;
+  text-align: left;
 }
 .container #button-selection .tag-space-ingredient {
   width: 200px;
@@ -86,15 +91,43 @@ body {
   flex-direction: column;
 }
 .container #button-selection .tag {
+  text-wrap: wrap;
+  text-align: -webkit-auto;
   list-style-type: none;
-  align-self: flex-start;
+}
+.container #button-selection .tagClick {
+  background-color: #FFD15B;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px;
+  border-radius: 5px;
+  padding-left: 5px;
+  height: 40px;
+  margin-top: 20px;
+}
+.container #button-selection .tagClick .fa-times-circle {
+  margin-right: 10px;
+}
+.container #button-selection .chevron-space {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .container #button-selection .chevron {
-  width: 60%;
-  text-align: end;
+  width: 20px;
 }
 .container #button-selection .space {
   border-color: rgba(128, 128, 128, 0.3254901961);
+}
+.container #button-selection li {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 5px;
+}
+.container #button-selection li:hover {
+  background-color: #FFD15B;
+  margin: 0;
 }
 .container .col {
   padding: 10px;
