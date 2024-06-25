@@ -154,6 +154,26 @@ body{
             margin: 0;
         }
 
+        .li-click{
+            display: flex;
+
+        }
+
+
+    .new-item-btn{
+        display: flex;
+        margin-right: 20px;
+        border: 1px solid #FFD15B;
+        border-radius: 10%;
+        background-color: #FFD15B;
+        padding: 10px;
+        width: 180px;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+
     }
 
     .col{
