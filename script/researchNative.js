@@ -1,6 +1,6 @@
 import {recipes} from '../data/recipes.js';
 import { recipeGenerate } from './recipe_generate.js';
-import { selectedTags } from './index.js';
+import { selectedTags } from './filter.js';
 
 const space = document.getElementById('space-research');
 

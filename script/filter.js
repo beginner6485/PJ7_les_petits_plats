@@ -1,5 +1,4 @@
 import { recipes } from "../data/recipes.js";
-import { researchRecipes } from "./research.js";
 import { createBtn, createTagContent } from "./tag.js";
 import { recipeGenerate } from "./recipe_generate.js";
 
@@ -31,3 +30,4 @@ createTagContent(allItems, buttonSpace, selectedTags);
 
 // Initialiser la recherche avec toutes les recettes
 recipeGenerate(recipes);
+

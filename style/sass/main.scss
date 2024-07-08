@@ -55,6 +55,7 @@ body{
         font-size: x-large;
         align-self: center;
         right: 200px; 
+
     }
 }
 
@@ -247,6 +248,16 @@ body{
             }
     }
 
+    .text-color{
+        background-color: #FFD15B;
+    }
+
     }
     
-
+.tag-item{
+    display: flex;
+    align-items: center;
+}
+.fa-times-circle{
+    margin-left: 10px;
+}

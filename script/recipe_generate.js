@@ -3,6 +3,7 @@ import { recipes } from '../data/recipes.js';
 
 export function recipeGenerate(recipes) {
     const row = document.querySelector('.row'); 
+    row.innerHTML = "";
 
     recipes.forEach(recipe => {
         // create element div col - 1st div
@@ -91,10 +92,8 @@ export function recipeGenerate(recipes) {
 
             recipeIngredients.classList.add('ingredientsArray');
             recipeIngredients.appendChild(elementRecipe);
-            elementRecipe.appendChild(ingredientSpan);
-            elementRecipe.appendChild(underElement);
-            underElement.appendChild(quantitySpan);
-            underElement.appendChild(unitySpan);
+            elementRecipe.append(ingredientSpan, underElement );
+            underElement.append(quantitySpan, unitySpan);
 
             // Ajouter l'objet ingrédient à la liste d'ingrédients
             ingredientsArray.push(items);
@@ -104,15 +103,9 @@ export function recipeGenerate(recipes) {
         row.appendChild(col);
         col.appendChild(recipeSpace); 
     
-        recipeSpace.appendChild(time);
-        recipeSpace.appendChild(imgDiv);
-        imgDiv.appendChild(img);
-        imgDiv.appendChild(recipeMargin);
-        recipeMargin.appendChild(title);
-        recipeMargin.appendChild(recipeContext);
-        recipeMargin.appendChild(description);
-        recipeMargin.appendChild(ingredientTitle);
-        recipeMargin.appendChild(ingredientSpace);
+        recipeSpace.append(time,imgDiv);
+        imgDiv.append(img, recipeMargin);
+        recipeMargin.append(title, recipeContext, description, ingredientTitle, ingredientSpace);
         ingredientSpace.appendChild(recipeIngredients);
         });
 }
