@@ -1,13 +1,14 @@
 import {recipes} from '../data/recipes.js';
 import { recipeGenerate } from './recipe_generate.js';
-import { selectedTags } from './filter.js';
+import { selectedTags } from './index.js';
 
 
 const space = document.getElementById('space-research');
 
+// research recipes in the search bar & Tag's selection
+
 export function researchRecipes() {
     let textTape = space.value.trim().toLowerCase();
-
     let filteredRecipes = recipes.filter(recipe => {
         let isNameMatch = recipe.name.toLowerCase().includes(textTape);
         let isIngredientMatch = recipe.ingredients.some(ingredient => ingredient.ingredient.toLowerCase().includes(textTape));
@@ -30,7 +31,7 @@ export function researchRecipes() {
     recipeGenerate(filteredRecipes);
 }
 
-// Gestion de la recherche par mot-clé
+// Keyword search management
 space.addEventListener('keyup', function() {
     if (space.value.trim().length >= 3) {
         researchRecipes();
