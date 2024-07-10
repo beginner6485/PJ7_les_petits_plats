@@ -4,6 +4,7 @@ import { selectedTags } from './filter.js';
 
 
 const space = document.getElementById('space-research');
+const main = document.getElementById('button-selection');
 
 export function researchRecipes() {
     let textTape = space.value.trim().toLowerCase();
@@ -19,8 +20,26 @@ export function researchRecipes() {
                          selectedTags.appliances.every(tag => recipe.appliance.toLowerCase() === tag) &&
                          selectedTags.ustensils.every(tag => recipe.ustensils.some(ustensil => ustensil.toLowerCase() === tag));
 
-        return (isNameMatch || isIngredientMatch || isApplianceMatch || isUstensilMatch || isDescriptionMatch) && isTagMatch;
+        
+            return (isNameMatch || isIngredientMatch || isApplianceMatch || isUstensilMatch || isDescriptionMatch) && isTagMatch;
+        
     });
+
+    const errorMessage = document.querySelector('.error-message');
+
+    if (filteredRecipes.length === 0) {
+        if (!errorMessage) {
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'error-message';
+            errorDiv.textContent = "No recipes found";
+            main.appendChild(errorDiv);
+        } else {
+            errorMessage.style.display = 'block';
+        }
+        return;
+    } else if (errorMessage) {
+        errorMessage.style.display = 'none';
+    }
 
     const allRecipes = document.querySelectorAll('.col');
     allRecipes.forEach(recipe => {
