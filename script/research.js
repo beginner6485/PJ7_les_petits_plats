@@ -6,6 +6,7 @@ import { selectedTags } from './filter.js';
 const space = document.getElementById('space-research');
 const main = document.getElementById('button-selection');
 
+
 export function researchRecipes() {
     let textTape = space.value.trim().toLowerCase();
 

@@ -227,4 +227,15 @@ body {
   font-weight: 200;
 }
 
+.flex-menu {
+  display: flex;
+  place-content: space-around;
+  align-items: end;
+}
+
+#counter {
+  font-weight: 500;
+  font-family: "Anton";
+}
+
 /*# sourceMappingURL=main.css.map */

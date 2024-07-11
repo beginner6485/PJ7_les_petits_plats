@@ -4,6 +4,9 @@ import { recipes } from '../data/recipes.js';
 export function recipeGenerate(recipes) {
     const row = document.querySelector('.row'); 
     row.innerHTML = "";
+    // ajout nb de recettes trouvées
+    const spaceCompteur = document.getElementById('counter');
+    spaceCompteur.textContent = recipes.length + ' recettes';
 
     recipes.forEach(recipe => {
         // create element div col - 1st div

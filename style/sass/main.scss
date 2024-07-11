@@ -174,7 +174,6 @@ body{
         margin-top: 20px;
     }
 
-
     }
 
     .col{
@@ -267,4 +266,15 @@ body{
     text-align: center;
     padding-top: 80px;
     font-weight: 200;
+}
+
+.flex-menu{
+    display: flex;
+    place-content: space-around;
+    align-items: end;
+}
+
+#counter{
+    font-weight: 500;
+    font-family: "Anton";
 }
